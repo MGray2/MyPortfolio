@@ -4,7 +4,7 @@
 .LargeNameText {
   display: flex;
   font-family: serif;
-  font-size: 55pt;
+  font-size: 420%;
   text-align: center;
   color: goldenrod;
   background-color: rgb(55, 55, 55);
@@ -144,9 +144,10 @@
 }
 .MSbutton {
   height: 5%;
-  width: 20%;
+  width: 25%;
   background-color: white;
   border-style: solid;
+  font-size: 48%;
 }
 .MSdesc {
   margin: 5%;
@@ -165,9 +166,10 @@
 }
 .GOHbutton {
   height: 8%;
-  width: 30%;
+  width: 40%;
   background-color: white;
   border-style: solid;
+  font-size: 48%;
 }
 .GOHbutton:hover {
   background-color: lightcoral;
