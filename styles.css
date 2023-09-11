@@ -187,8 +187,9 @@
   flex-wrap: wrap;
   border-style: inset;
   border-width: 4px;
-  background-color: navy;
+  background-color: rgb(3, 3, 144);
   color: white;
+  box-shadow: inset 3px 3px 8px 8px rgb(1, 1, 79);
 }
 .Skills {
   text-align: center;
