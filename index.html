@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="pageOptions">
   <head>
     <link rel="stylesheet" href="styles.css" />
     <link rel="icon" href="images/M.png" />
@@ -7,104 +7,151 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Portfolio of Micah Gray</title>
   </head>
-  <header>
-    <div class="flexBox1">
-      <div>
-        <form action="https://github.com/MGray2" target="_blank">
-          <input
-            type="image"
-            src="images/Github-Icon.png"
-            title="Github"
-            class="githubbutton"
-          />
-        </form>
-      </div>
-      <div>
-        <form action="mailto:mgray24@basecampcodingacademy.org" method="get">
-          <input
-            type="image"
-            src="images/Gmail_Logo_128px.png"
-            title="Gmail"
-            class="gmailbutton"
-          />
-        </form>
-      </div>
-      <div>
-        <form
-          action="https://www.linkedin.com/in/micah-gray-465592280/"
-          target="_blank"
-        >
-          <input
-            type="image"
-            src="images/Linkedin-logo.png"
-            title="LinkedIn"
-            class="linkedinbutton"
-          />
-        </form>
-      </div>
-    </div>
-  </header>
+  <!-- Page -->
   <body class="page">
-    <div>
-      <h1 class="LargeNameText">Micah Gray</h1>
-      <div><hr class="line1" /></div>
+    <!-- Header Bar -->
+    <header>
+      <div class="navBar">
+        <div><h1>Micah Gray</h1></div>
+        <div class="navHolder">
+          <div><a href="#titleBox" class="navItem">Home</a></div>
+          <div>
+            <a href="projects.html" target="_blank" class="navItem">Projects</a>
+          </div>
+          <div>
+            <a href="resume.html" target="_blank" class="navItem">Resume</a>
+          </div>
+          <div><a href="" class="navItem">Contact</a></div>
+        </div>
+      </div>
+    </header>
+    <!-- Title -->
+    <div class="titleBox" id="titleBox">
+      <div><h1>Micah Gray</h1></div>
+      <div><h5 class="smallTitle">Software Developer</h5></div>
+      <div><hr class="titleLine" /></div>
     </div>
-    <div class="flexBox2">
-      <h2 class="AboutMe">About Me</h2>
-      <hr class="line2" />
-      <p class="AboutDesc">
-        My name is Micah Gray. I graduated from Mooreville Highschool and I now
-        currently attend Base Camp Coding Academy. What I like about software
-        development is that it about creativity and problem solving. My hobbies
-        include playing video games and watching movies in my free time.
-      </p>
-    </div>
-    <div class="flexBox3">
-      <div class="flexItem1">
-        <h2 class="Projects">Projects</h2>
-        <img
-          src="images/msword.png"
-          title="?"
-          alt="MicahSoft Word Project"
-          class="MSimage"
-        />
-        <p class="desc">
-          MicahSoft Word is my award-winning, unit 2 project made in replit and
-          coded in python. It is a simplified mimicry of both Microsoft Word and
-          Google Docs as a python program.
+    <!-- About Me Box -->
+    <div class="aboutMeBox">
+      <div><h2 class="aboutMe">About Me</h2></div>
+      <div><hr class="aboutDivider" /></div>
+      <div>
+        <p class="aboutDesc">
+          My name is Micah Gray. I graduated from Mooreville Highschool and I
+          now currently attend Base Camp Coding Academy. What I like about
+          software development is that it is about creativity and problem
+          solving. My hobbies include playing video games and watching movies in
+          my free time.
         </p>
-        <br /><a
-          href="https://replit.com/@MicahGray3/Off-Brand-MS-Word"
+      </div>
+    </div>
+    <!-- My Projects Box -->
+    <div class="rightPageHolder">
+      <div class="linkButtonBox">
+        <div>
+          <h2>My Projects</h2>
+        </div>
+        <div>
+          <a href="projects.html" target="_blank"
+            ><input
+              type="button"
+              value="View My Projects"
+              class="projectsButton"
+          /></a>
+        </div>
+      </div>
+      <!-- My Resume Box -->
+      <div class="linkButtonBox">
+        <div><h2>My Resume</h2></div>
+        <div>
+          <a href="resume.html" target="_blank"
+            ><input type="button" value="View My Resume" class="projectsButton"
+          /></a>
+        </div>
+      </div>
+    </div>
+    <!-- My Skills Box -->
+    <div class="skillsBox">
+      <div><h2>My Skills</h2></div>
+      <div class="iconHolder">
+        <!--Python-->
+        <div>
+          <img src="images/python-perfect.png" class="icon" /><br />
+          <p class="iconText">Python</p>
+        </div>
+        <!--SQL-->
+        <div>
+          <img src="images/sql.png" class="icon" /><br />
+          <p class="iconText">SQL</p>
+        </div>
+        <!--Git-->
+        <div>
+          <img src="images/git.perfect.png" class="icon" /><br />
+          <p class="iconText">Git</p>
+        </div>
+        <!--HTML-->
+        <div>
+          <img src="images/html-5-logotype.png" class="icon" /><br />
+          <p class="iconText">HTML5</p>
+        </div>
+        <!--CSS-->
+        <div>
+          <img src="images/css-3.png" class="icon" /><br />
+          <p class="iconText">CSS</p>
+        </div>
+      </div>
+      <div class="iconHolder">
+        <!--JavaScript-->
+        <div>
+          <img src="images/java-script.png" class="icon" /><br />
+          <p class="iconText">JavaScript</p>
+        </div>
+        <!--Django-->
+        <div>
+          <img src="images/django.png" class="icon" /><br />
+          <p class="iconText">Django</p>
+        </div>
+        <!--Bootstrap-->
+        <div>
+          <img src="images/bootstrap.png" class="icon" /><br />
+          <p class="iconText">Bootstrap</p>
+        </div>
+        <!--Java-->
+        <div>
+          <img src="images/java.png" class="icon" /><br />
+          <p class="iconText">Java</p>
+        </div>
+        <!--Spring-->
+        <div>
+          <img src="images/spring-logo-b.png" class="icon" /><br />
+          <p class="iconText">Spring</p>
+        </div>
+      </div>
+    </div>
+    <!--Footer-->
+    <footer class="bottomBar">
+      <div>
+        <a
+          href="mailto:mgray24@basecampcodingacademy.org"
+          method="get"
           target="_blank"
-          ><input type="button" value="Click Here To View" class="LinkButton"
-        /></a>
+          class="navItem"
+          >Gmail
+        </a>
       </div>
-      <div class="flexItem2">
-        <img
-          src="images/Icloud_pic.png"
-          title="CopyCat of ICloud"
-          alt="CopyCat Project"
-          class="Iimage"
-        />
-        <p class="desc">
-          This is a replica of the ICloud login page for an assignment where I
-          created a website to mimic the appearance of the login page.
-        </p>
-        <br /><a href="https://mgray2.github.io/CopyCatMG/" target="_blank">
-          <input type="button" value="Click Here To View" class="LinkButton"
-        /></a>
-      </div>
-    </div>
-    <div class="Skills">Skills</div>
-    <div class="flexBox4">
       <div>
-        <img src="images/Python.png" title="Python" class="SkillItem" />Python
+        <a
+          href="https://www.linkedin.com/in/micah-gray-465592280/"
+          target="_blank"
+          class="navItem"
+          >LinkedIn
+        </a>
       </div>
-      <div><img src="images/sql.png" title="SQL" class="SkillItem" />SQL</div>
       <div>
-        <img src="images/html5.png" title="HTML5" class="SkillItem" />HTML
+        <a href="https://github.com/MGray2" target="_blank" class="navItem"
+          >Github
+        </a>
       </div>
-      <div><img src="images/css.png" title="CSS" class="SkillItem" />CSS</div>
-    </div>
+    </footer>
   </body>
 </html>
