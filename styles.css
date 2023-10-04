@@ -85,7 +85,7 @@
   color: darkgoldenrod;
 }
 
-.aboutMeBox {
+#aboutMeBox {
   display: flex;
   width: 80%;
   height: fit-content;
@@ -120,24 +120,81 @@
   top: 0%;
   left: 0%;
 }
-.rightPageHolder {
+
+#darkButton {
+  color: white;
+  font-family: "Times New Roman";
+  background-color: rgb(33, 33, 33);
+  width: 45px;
+  height: 45px;
+  border-radius: 12px;
+  border-style: none;
+  box-shadow: 0px 0px 3px black;
+  position: fixed;
+  top: 1%;
+  left: 95%;
+  z-index: 8;
+}
+
+#darkButton:hover {
+  cursor: pointer;
+  background-color: rgb(54, 54, 54);
+}
+
+.superPageHolder {
+  position: absolute;
+  top: 160%;
+  left: 5%;
+  width: 90%;
+  height: fit-content;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
-  width: 42%;
-  height: 100%;
-  position: absolute;
-  top: 170%;
-  left: 52%;
+  justify-content: space-between;
 }
 
-.linkButtonBox {
+.rightPageHolder {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+}
+.leftPageHolder {
   display: flex;
   flex-direction: column;
-  align-items: space-evenly;
+  align-items: center;
+  justify-content: space-between;
+  width: 46%;
+  height: 100%;
+}
+
+#linkButtonBox {
+  display: flex;
+  flex-direction: column;
+  align-items: space-between;
   justify-content: center;
-  width: 90%;
+  width: 38%;
+  height: 35%;
+  border-style: none;
+  border-radius: 12px;
+  background-color: white;
+  padding: 5%;
+  color: black;
+  text-shadow: 2px 2px goldenrod;
+  text-align: center;
+  font-size: 130%;
+  flex-wrap: nowrap;
+  box-shadow: 0px 0px 8px gray;
+  margin-bottom: 10%;
+}
+#linkButtonBox2 {
+  display: flex;
+  flex-direction: column;
+  align-items: space-between;
+  justify-content: center;
+  width: 38%;
   height: 35%;
   border-style: none;
   border-radius: 12px;
@@ -239,14 +296,11 @@
 .LinkButton:hover {
   background-color: lightcoral;
 }
-.skillsBox {
+#skillsBox {
   display: flex;
   flex-direction: column;
-  width: 42%;
-  height: fit-content;
-  position: absolute;
-  top: 170%;
-  left: 5%;
+  width: 220%;
+  height: 75%;
   background-color: white;
   border-style: none;
   border-radius: 12px;
@@ -258,12 +312,13 @@
   box-shadow: 0px 0px 8px gray;
 }
 
-.iconHolder {
+#iconHolder {
   display: flex;
   flex-direction: row;
   width: 100%;
-  height: 80%;
+  height: fit-content;
   border-style: none;
+  border-radius: 12px;
   flex-wrap: wrap;
   flex-shrink: 1;
   justify-content: space-evenly;
@@ -272,8 +327,8 @@
   text-align: center;
 }
 .icon {
-  width: 55px;
-  height: 55px;
+  width: 45px;
+  height: 45px;
 }
 .iconText {
   color: black;

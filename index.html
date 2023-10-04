@@ -32,7 +32,7 @@
       <div><hr class="titleLine" /></div>
     </div>
     <!-- About Me Box -->
-    <div class="aboutMeBox">
+    <div id="aboutMeBox">
       <div><h2 class="aboutMe">About Me</h2></div>
       <div><hr class="aboutDivider" /></div>
       <div>
@@ -45,89 +45,95 @@
         </p>
       </div>
     </div>
-    <!-- My Projects Box -->
-    <div class="rightPageHolder">
-      <div class="linkButtonBox">
-        <div>
-          <h2>My Projects</h2>
+    <div class="superPageHolder">
+      <!-- My Projects Box -->
+      <div class="rightPageHolder">
+        <div id="linkButtonBox">
+          <div>
+            <h2>My Projects</h2>
+          </div>
+          <div>
+            <a href="projects.html" target="_blank"
+              ><input
+                type="button"
+                value="View My Projects"
+                class="projectsButton"
+            /></a>
+          </div>
         </div>
-        <div>
-          <a href="projects.html" target="_blank"
-            ><input
-              type="button"
-              value="View My Projects"
-              class="projectsButton"
-          /></a>
+        <!-- My Resume Box -->
+        <div id="linkButtonBox2">
+          <div><h2>My Resume</h2></div>
+          <div>
+            <a href="resume.html" target="_blank"
+              ><input
+                type="button"
+                value="View My Resume"
+                class="projectsButton"
+            /></a>
+          </div>
         </div>
       </div>
-      <!-- My Resume Box -->
-      <div class="linkButtonBox">
-        <div><h2>My Resume</h2></div>
-        <div>
-          <a href="resume.html" target="_blank"
-            ><input type="button" value="View My Resume" class="projectsButton"
-          /></a>
+      <!-- My Skills Box -->
+      <div class="leftPageHolder">
+        <div id="skillsBox">
+          <div><h2>My Skills</h2></div>
+          <div id="iconHolder">
+            <!--Python-->
+            <div>
+              <img src="images/python-perfect.png" class="icon" /><br />
+              <p class="iconText">Python</p>
+            </div>
+            <!--SQL-->
+            <div>
+              <img src="images/sql.png" class="icon" /><br />
+              <p class="iconText">SQL</p>
+            </div>
+            <!--Git-->
+            <div>
+              <img src="images/git.perfect.png" class="icon" /><br />
+              <p class="iconText">Git</p>
+            </div>
+            <!--HTML-->
+            <div>
+              <img src="images/html-5-logotype.png" class="icon" /><br />
+              <p class="iconText">HTML5</p>
+            </div>
+            <!--CSS-->
+            <div>
+              <img src="images/css-3.png" class="icon" /><br />
+              <p class="iconText">CSS</p>
+            </div>
+            <!--JavaScript-->
+            <div>
+              <img src="images/java-script.png" class="icon" /><br />
+              <p class="iconText">JavaScript</p>
+            </div>
+            <!--Django-->
+            <div>
+              <img src="images/django.png" class="icon" /><br />
+              <p class="iconText">Django</p>
+            </div>
+            <!--Bootstrap-->
+            <div>
+              <img src="images/bootstrap.png" class="icon" /><br />
+              <p class="iconText">Bootstrap</p>
+            </div>
+            <!--Java-->
+            <div>
+              <img src="images/java.png" class="icon" /><br />
+              <p class="iconText">Java</p>
+            </div>
+            <!--Spring-->
+            <div>
+              <img src="images/spring-logo-b.png" class="icon" /><br />
+              <p class="iconText">Spring</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-    <!-- My Skills Box -->
-    <div class="skillsBox">
-      <div><h2>My Skills</h2></div>
-      <div class="iconHolder">
-        <!--Python-->
-        <div>
-          <img src="images/python-perfect.png" class="icon" /><br />
-          <p class="iconText">Python</p>
-        </div>
-        <!--SQL-->
-        <div>
-          <img src="images/sql.png" class="icon" /><br />
-          <p class="iconText">SQL</p>
-        </div>
-        <!--Git-->
-        <div>
-          <img src="images/git.perfect.png" class="icon" /><br />
-          <p class="iconText">Git</p>
-        </div>
-        <!--HTML-->
-        <div>
-          <img src="images/html-5-logotype.png" class="icon" /><br />
-          <p class="iconText">HTML5</p>
-        </div>
-        <!--CSS-->
-        <div>
-          <img src="images/css-3.png" class="icon" /><br />
-          <p class="iconText">CSS</p>
-        </div>
-      </div>
-      <div class="iconHolder">
-        <!--JavaScript-->
-        <div>
-          <img src="images/java-script.png" class="icon" /><br />
-          <p class="iconText">JavaScript</p>
-        </div>
-        <!--Django-->
-        <div>
-          <img src="images/django.png" class="icon" /><br />
-          <p class="iconText">Django</p>
-        </div>
-        <!--Bootstrap-->
-        <div>
-          <img src="images/bootstrap.png" class="icon" /><br />
-          <p class="iconText">Bootstrap</p>
-        </div>
-        <!--Java-->
-        <div>
-          <img src="images/java.png" class="icon" /><br />
-          <p class="iconText">Java</p>
-        </div>
-        <!--Spring-->
-        <div>
-          <img src="images/spring-logo-b.png" class="icon" /><br />
-          <p class="iconText">Spring</p>
-        </div>
-      </div>
-    </div>
+    <button id="darkButton">Dark Mode</button>
     <!--Footer-->
     <footer class="bottomBar">
       <div>
@@ -153,5 +159,6 @@
         </a>
       </div>
     </footer>
+    <script src="main.js"></script>
   </body>
 </html>
