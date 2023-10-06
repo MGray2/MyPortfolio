@@ -153,8 +153,6 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  border-style: dotted;
-  border-color: green;
 }
 
 .rightPageHolder {
@@ -276,7 +274,7 @@
 #skillsBox {
   display: flex;
   flex-direction: column;
-  width: 220%;
+  width: 218%;
   height: 75%;
   background-color: white;
   border-style: none;
