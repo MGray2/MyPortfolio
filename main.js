@@ -5,6 +5,8 @@ const portalBox = document.getElementById("linkButtonBox");
 const portalBox2 = document.getElementById("linkButtonBox2");
 const skillBox = document.getElementById("skillsBox");
 const skillBar = document.getElementById("iconHolder");
+const aboutMe = document.querySelector("#aboutMeBox p");
+
 darkMode.addEventListener("click", () => {
   if (body.style.backgroundColor == "lightgray") {
     darkMode.style.color = "gold";
