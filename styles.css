@@ -350,23 +350,16 @@
   height: fit-content;
 }
 
-.MSimage {
+.projectImage {
   height: 200px;
   width: 300px;
   border-width: 4px;
   border-style: inset;
-  border-color: purple;
+  border-color: goldenrod;
 }
 
 .desc {
   margin: 5%;
-}
-
-.Iimage {
-  height: 200px;
-  width: 300px;
-  border-width: 4px;
-  border-style: inset;
 }
 
 .LinkButton {
@@ -380,6 +373,10 @@
 }
 .LinkButton:hover {
   background-color: gold;
+}
+
+.linkButton:active {
+  cursor: progress;
 }
 
 .miniPageHolder {
