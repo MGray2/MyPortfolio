@@ -242,14 +242,12 @@
 }
 
 #iconHolder {
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: repeat(4, 60px);
   width: 100%;
   height: fit-content;
   border-style: none;
   border-radius: 12px;
-  flex-wrap: wrap;
-  flex-shrink: 1;
   justify-content: space-evenly;
   padding-bottom: 2%;
   padding-top: 2%;
