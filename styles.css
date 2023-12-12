@@ -1,51 +1,15 @@
-.page {
-  background-color: lightgray;
+/* general */
+p {
+  text-shadow: none;
 }
-.pageOptions {
-  scroll-behavior: smooth;
-}
-.titleBox {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  font-family: Times New Roman;
-  font-size: 210%;
-  text-align: center;
-  justify-content: flex-end;
-  color: goldenrod;
-  background-color: rgb(43, 43, 43);
-  text-shadow: 3px 3px black;
-  padding-top: 10%;
-  width: 100%;
-  height: 60%;
-  position: absolute;
-  z-index: 1;
-  top: 0%;
-  left: 0%;
-  flex-direction: column;
-}
-.smallTitle {
-  text-align: center;
-  position: relative;
-  top: -60%;
-  font-style: italic;
-}
-.titleLine {
-  width: 100%;
-  height: 3%;
-  border-style: none;
-  background-color: goldenrod;
-  z-index: 1;
-  position: absolute;
-  top: 95%;
-  left: 0%;
-}
+
+/* Navigation Bar */
 .navBar {
   display: flex;
   width: 100%;
   height: 10%;
-  background-color: rgb(58, 58, 58);
-  box-shadow: 0px 4px 4px 6px rgb(33, 33, 33);
+  background-color: rgb(38, 38, 38);
+  box-shadow: 0px 4px 4px 6px rgb(30, 30, 30);
   position: fixed;
   top: 0%;
   left: 0%;
@@ -71,41 +35,79 @@
   color: white;
   text-wrap: nowrap;
 }
-.navItem {
+.navButton {
   width: fit-content;
 }
-.navItem:link {
+.navButton:link {
   color: white;
   text-decoration: none;
 }
-.navItem:visited {
+.navButton:visited {
   color: white;
 }
-.navItem:hover {
+.navButton:hover {
   color: gold;
 }
-.navItem:active {
+.navButton:active {
   color: darkgoldenrod;
 }
+/* Title Box */
+.titleBox {
+  display: flex;
+  flex-direction: column;
+  font-family: Times New Roman;
+  font-size: 200%;
+  text-align: center;
+  justify-content: center;
+  border-bottom: 20px;
+  border-bottom-style: solid;
+  border-bottom-color: goldenrod;
+  color: goldenrod;
+  background-color: rgb(20, 20, 20);
+  text-shadow: 3px 3px black;
+  padding-top: 10%;
+  width: 100%;
+  height: 40%;
+  min-height: 300px;
+  position: absolute;
+  z-index: 4;
+  top: 0%;
+  left: 0%;
+}
 
-#aboutMeBox {
+/* Page Holder */
+.pageHolder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  height: fit-content;
+  position: absolute;
+  top: 70%;
+  left: 0%;
+}
+
+/* About Me Box */
+.aboutMeBox {
   display: flex;
   width: 80%;
   height: fit-content;
-  margin-bottom: 10%;
+  padding-left: 5%;
+  padding-right: 5%;
   flex-direction: column;
   text-align: center;
   justify-content: center;
   flex-wrap: wrap;
   background-color: white;
+  color: black;
+  text-shadow: 2px 2px goldenrod;
+  font-family: 'Times New Roman';
+  font-size: 15pt;
   border-radius: 10px;
   box-shadow: 0px 0px 8px gray;
   flex-wrap: nowrap;
-}
-.aboutMe {
-  text-align: center;
-  font-size: 240%;
-  text-shadow: 2px 2px goldenrod;
+  z-index: 3;
 }
 
 .aboutDivider {
@@ -115,61 +117,18 @@
   border-style: none;
 }
 
-.aboutDesc {
-  font-size: 120%;
-  padding: 5%;
-  position: relative;
-  top: 0%;
-  left: 0%;
-}
+/* Projects/Resume */
 
-#darkButton {
-  color: white;
-  font-family: "Times New Roman";
-  background-color: rgb(33, 33, 33);
-  width: 45px;
-  height: 45px;
-  border-radius: 12px;
-  border-style: none;
-  box-shadow: 0px 0px 3px black;
-  position: fixed;
-  top: 1%;
-  left: 95%;
-  z-index: 8;
-}
-
-#darkButton:hover {
-  cursor: pointer;
-  background-color: rgb(54, 54, 54);
-}
-
-.superPageHolder {
-  position: absolute;
-  top: 90%;
-  left: 5%;
-  width: 90%;
-  height: fit-content;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.rightPageHolder {
+.holder {
   display: flex;
   flex-direction: row;
+  justify-content: space-evenly;
   align-items: center;
-  justify-content: space-between;
+  margin-top: 5%;
+  margin-bottom: 5%;
   width: 100%;
-  height: 100%;
-}
-.leftPageHolder {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  width: 46%;
-  height: 100%;
+  height: fit-content;
+  z-index: 2;
 }
 
 .linkButtonBox {
@@ -177,8 +136,9 @@
   flex-direction: column;
   align-items: space-between;
   justify-content: center;
-  width: 38%;
+  width: 35%;
   height: 35%;
+  min-height: 200px;
   border-style: none;
   border-radius: 12px;
   background-color: white;
@@ -189,7 +149,7 @@
   font-size: 130%;
   flex-wrap: nowrap;
   box-shadow: 0px 0px 8px gray;
-  margin-bottom: 10%;
+  
 }
 
 .projectsButton {
@@ -198,38 +158,31 @@
   padding: 4%;
   border-radius: 12px;
   background-color: goldenrod;
-  border-color: darkgoldenrod;
   color: black;
-  border-style: solid;
+  border-style: none;
+  box-shadow: 0px 2px 3px gray;
   font-family: Times New Roman;
   font-size: 80%;
   text-wrap: wrap;
 }
+
 .projectsButton:hover {
   background-color: gold;
-  border-color: goldenrod;
+  box-shadow: none;
   color: black;
   cursor: pointer;
 }
+
 .projectsButton:active {
   cursor: progress;
 }
 
-.flexItem1 {
-  position: relative;
-  top: 2%;
-}
-.flexItem2 {
-  position: relative;
-  top: 20%;
-}
-
-/* skills box and icons */
-#skillsBox {
+/* Skills */
+.skillsBox {
   display: flex;
   flex-direction: column;
-  width: 218%;
-  height: 75%;
+  width: 90%;
+  height: fit-content;
   background-color: white;
   border-style: none;
   border-radius: 12px;
@@ -241,7 +194,7 @@
   box-shadow: 0px 0px 8px gray;
 }
 
-#iconHolder {
+.iconHolder {
   display: grid;
   grid-template-columns: repeat(4, 60px);
   width: 100%;
@@ -263,125 +216,4 @@
   font-size: 65%;
   width: 60px;
   height: 18px;
-}
-/* bottom page nav bar */
-.bottomBar {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-evenly;
-  width: 111%;
-  height: 8%;
-  background-color: rgb(58, 58, 58);
-  box-shadow: 0px -4px 4px 6px rgb(54, 54, 54);
-  text-shadow: 2px 2px black;
-  font-size: 12pt;
-  position: absolute;
-  top: 110%;
-  left: -6%;
-}
-/* for use with projects page */
-.projectPageHolder {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  position: absolute;
-  top: 0%;
-  left: 0%;
-  width: 100%;
-  height: fit-content;
-  min-height: 50%;
-  background-color: rgb(43, 43, 43);
-}
-.projects {
-  display: flex;
-  width: 80%;
-  height: fit-content;
-
-  flex-direction: column;
-  padding: 9.5%;
-  justify-content: center space-around;
-  align-items: center;
-  flex-wrap: wrap;
-  text-align-last: center;
-  align-content: space-evenly;
-  column-gap: 6%;
-  background-color: white;
-  border-radius: 12px;
-}
-
-.projectTitle {
-  text-align: center;
-  font-size: 240%;
-  text-shadow: 2px 2px goldenrod;
-}
-.projectBox {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: white;
-  border-radius: 12px;
-  color: black;
-  text-align: center;
-  padding-top: 3%;
-  padding-bottom: 3%;
-  box-shadow: 0px 0px 8px gray;
-  width: 80%;
-  height: fit-content;
-  margin-top: 2.5%;
-  margin-bottom: 2.5%;
-}
-
-.projectsPage {
-  background-color: gray;
-  display: flex;
-  width: 100%;
-  height: fit-content;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-}
-
-.desc {
-  width: 80%;
-  height: fit-content;
-}
-
-.projectImage {
-  height: 180px;
-  width: 270px;
-  border-width: 4px;
-  border-style: inset;
-  border-color: goldenrod;
-}
-
-.desc {
-  margin: 5%;
-}
-
-.LinkButton {
-  height: 45px;
-  width: 225px;
-  background-color: goldenrod;
-  border-color: darkgoldenrod;
-  border-style: solid;
-  border-radius: 12px;
-  font-size: 78%;
-}
-.LinkButton:hover {
-  background-color: gold;
-}
-
-.linkButton:active {
-  cursor: progress;
-}
-
-.miniPageHolder {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 100%;
-  width: 90%;
-  background-color: rgb(216, 214, 214);
 }
