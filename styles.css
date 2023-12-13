@@ -1,11 +1,10 @@
 /* General */
-p {
-  text-shadow: none;
-}
+
 :root {
   /* main colors */
   --primary-gold: rgb(243, 178, 13);
   --secondary-gold: rgb(246, 197, 76);
+  --tertiary-gold: rgb(181, 132, 9);
   /* black colors / shadows */
   --primary-black: rgb(0, 0, 0);
   --secondary-black: rgb(43, 43, 43);
@@ -15,6 +14,14 @@ p {
   --primary-white: rgb(255, 255, 255);
   --secondary-white: rgb(225, 223, 223);
   --tertiary-white: rgb(175, 175, 175);
+}
+
+p {
+  text-shadow: none;
+}
+
+body {
+  background-color: var(--secondary-white)
 }
 
 /* Navigation Bar */
@@ -246,4 +253,98 @@ p {
   position: absolute;
   top: 110%;
   left: 0%;
+}
+
+/* Project Page */
+.projectPageHolder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: auto;
+  min-height: 50%;
+  background-color: var(--secondary-black);
+}
+
+.project {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--primary-white);
+  border-radius: 12px;
+  color: var(--primary-black);
+  text-align: center;
+  padding-top: 3%;
+  padding-bottom: 3%;
+  box-shadow: 0px 0px 8px var(--tertiary-white);
+  width: 80%;
+  height: fit-content;
+  margin-top: 2.5%;
+  margin-bottom: 2.5%;
+  text-shadow: 2px 2px var(--primary-gold);
+  font-size: 14pt;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.projectsPage {
+  background-color: var(--secondary-white);
+  display: flex;
+  width: 100%;
+  height: fit-content;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.desc {
+  width: 80%;
+  height: fit-content;
+}
+
+.projectImage {
+  height: 180px;
+  width: 270px;
+  border-width: 4px;
+  border-style: inset;
+  border-color: var(--primary-gold);
+}
+
+.desc {
+  margin: 5%;
+}
+
+.LinkButton {
+  height: 45px;
+  width: 225px;
+  background-color: var(--primary-gold);
+  border-color: var(--tertiary-gold);
+  border-style: solid;
+  border-radius: 12px;
+  font-size: 78%;
+}
+.LinkButton:hover {
+  background-color: var(--primary-gold);
+}
+
+.linkButton:active {
+  cursor: progress;
+}
+
+.miniPageHolder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  width: 90%;
+  background-color: var(--secondary-white);
+  border-radius: 24pt;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  font-size: 24pt;
+  text-shadow: 2px 2px var(--primary-gold);
 }
