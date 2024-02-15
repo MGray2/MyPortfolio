@@ -60,8 +60,16 @@ html {
   color: var(--primary-white);
   text-wrap: nowrap;
 }
+
+
+.unique, .unique:link, .unique:visited, .unique:active {
+  color: var(--primary-gold) !important;
+  cursor: default; 
+}
+
 .navButton {
   width: fit-content;
+  font-size: 14pt;
 }
 .navButton:link {
   color: var(--primary-white);
@@ -75,6 +83,10 @@ html {
 }
 .navButton:active {
   color: var(--primary-gold);
+}
+
+.glowEffect:hover {
+  text-shadow: 0px 0px 4px var(--primary-white);
 }
 
 /* Fade-In Animation */
