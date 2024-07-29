@@ -21,7 +21,7 @@ p {
 }
 
 body {
-  background-color: var(--secondary-white)
+  background-color: var(--secondary-white);
 }
 
 html {
@@ -61,10 +61,12 @@ html {
   text-wrap: nowrap;
 }
 
-
-.unique, .unique:link, .unique:visited, .unique:active {
+.unique,
+.unique:link,
+.unique:visited,
+.unique:active {
   color: var(--primary-gold) !important;
-  cursor: default; 
+  cursor: default;
 }
 
 .navButton {
@@ -126,24 +128,25 @@ html {
 
 /* Flash Animation */
 .flash {
-  opacity: 0; 
-  text-shadow: 0 0 10px transparent, 0 0 20px transparent, 0 0 30px transparent; 
+  opacity: 0;
+  text-shadow: 0 0 10px transparent, 0 0 20px transparent, 0 0 30px transparent;
   animation: flashAnimation 1.5s forwards;
 }
 
 @keyframes flashAnimation {
   0% {
     opacity: 0;
-    text-shadow: 0 0 10px transparent, 0 0 20px transparent, 0 0 30px transparent; 
+    text-shadow: 0 0 10px transparent, 0 0 20px transparent,
+      0 0 30px transparent;
   }
   50% {
     opacity: 1;
     text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff;
-    color: #fff; 
+    color: #fff;
   }
   100% {
     opacity: 1;
-    text-shadow: 3px 3px black; 
+    text-shadow: 3px 3px black;
     color: var(--primary-gold);
   }
 }
@@ -190,7 +193,7 @@ html {
   background-color: var(--primary-white);
   color: var(--primary-black);
   text-shadow: 2px 2px var(--primary-gold);
-  font-family: 'Times New Roman';
+  font-family: "Times New Roman";
   font-size: 15pt;
   border-radius: 10px;
   box-shadow: 0px 0px 8px var(--tertiary-white);
@@ -207,9 +210,12 @@ html {
 
 /* Projects/Resume */
 
-#box1, #box2, #box3, #box4 {
-  opacity: 0; 
-  transform: translateY(20px); 
+#box1,
+#box2,
+#box3,
+#box4 {
+  opacity: 0;
+  transform: translateY(20px);
   transition: opacity 0.5s, transform 0.5s;
 }
 
@@ -243,7 +249,6 @@ html {
   font-size: 130%;
   flex-wrap: nowrap;
   box-shadow: 0px 0px 8px var(--tertiary-white);
-  
 }
 
 .projectsButton {
@@ -359,7 +364,6 @@ html {
   font-size: 14pt;
   margin-bottom: 5%;
   overflow: hidden;
-
 }
 
 .projectsPage {
@@ -411,16 +415,56 @@ html {
 }
 
 .miniPageHolder {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
   height: 100%;
   width: 90%;
   background-color: var(--secondary-white);
-  border-radius: 24pt;
-  margin-top: 5%;
-  margin-bottom: 5%;
+  padding: 5%;
   font-size: 24pt;
   text-shadow: 2px 2px var(--primary-gold);
 }
 
+.miniTitle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 40%;
+  min-height: 100px;
+  font-family: Times New Roman;
+  font-size: 200%;
+  border-bottom: 10px;
+  border-bottom-style: solid;
+  border-bottom-color: var(--primary-gold);
+  color: var(--primary-gold);
+  background-color: var(--quaternary-black);
+  text-shadow: 3px 3px var(--primary-black);
+  padding-top: 10%;
+  padding-bottom: 3%;
+}
+
+/* 
+.titleBox {
+  display: flex;
+  flex-direction: column;
+  font-family: Times New Roman;
+  font-size: 200%;
+  text-align: center;
+  justify-content: center;
+  border-bottom: 20px;
+  border-bottom-style: solid;
+  border-bottom-color: var(--primary-gold);
+  color: var(--primary-gold);
+  background-color: var(--quaternary-black);
+  text-shadow: 3px 3px var(--primary-black);
+  padding-top: 10%;
+  width: 100%;
+  height: 40%;
+  min-height: 300px;
+  position: absolute;
+  z-index: 4;
+  top: 0%;
+  left: 0%;
+}
+*/
