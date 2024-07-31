@@ -378,8 +378,10 @@ html {
 }
 
 .miniPageHolder {
-  display: grid;
-  grid-template-columns: repeat(3, 33%);
+  display: flex;
+  overflow-x: hidden;
+  scroll-snap-type: mandatory;
+  scroll-behavior: smooth;
   width: 96%;
   background-color: var(--secondary-white);
   font-size: 24pt;
@@ -387,8 +389,22 @@ html {
   padding: 2%;
 }
 
+.scrollButton {
+  width: 100%;
+  height: 100%;
+}
+
+.scrollButton.L {
+  left: 10px;
+}
+
+.scrollButton.R {
+  right: 10px;
+}
+
 .project {
   display: flex;
+  flex: none;
   flex-direction: column;
   align-items: center;
   background-color: var(--primary-white);
@@ -398,10 +414,15 @@ html {
   padding: 3%;
   box-shadow: 0px 0px 8px var(--tertiary-white);
   width: 80%;
-  height: 80%;
+  height: 40%;
   text-shadow: 2px 2px var(--primary-gold);
   font-size: 12pt;
   overflow: hidden;
+  margin-left: 10%;
+  margin-right: 10%;
+  scroll-snap-align: start;
+  transform: scale(0.8);
+  transition: transform 0.5s ease;
 }
 
 .projectsPage {

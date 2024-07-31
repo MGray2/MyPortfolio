@@ -35,7 +35,7 @@
       <div class="miniTitle">Projects</div>
       <div class="miniPageHolder">
         <!-- #1 -->
-        <div class="project">
+        <div class="project" id="1">
           <h1>MicahSoft Workbook</h1>
           <img
             src="images\Screenshot_20-3-2024_192239_mcs-workbook-da079546340c.herokuapp.com.jpeg"
@@ -176,6 +176,24 @@
           /></a>
         </div>
       </div>
+      <br />
+      <div>
+        <button
+          class="scrollButton L"
+          onclick="scrollCarousel(-1)"
+          title="Previous project"
+        >
+          «
+        </button>
+        <button
+          class="scrollButton R"
+          onclick="scrollCarousel(1)"
+          title="Next project"
+        >
+          »
+        </button>
+      </div>
     </div>
   </body>
+  <script src="main.js"></script>
 </html>
