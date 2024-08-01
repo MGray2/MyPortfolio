@@ -31,17 +31,53 @@ if (document.title === "Portfolio of Micah Gray") {
 }
 // Projects page
 if (document.title === "Projects") {
+  const carousel = document.querySelector(".miniPageHolder");
+  const projects = document.querySelectorAll(".project");
   function scrollCarousel(direction) {
-    const carousel = document.querySelector(".miniPageHolder");
-    const projects = document.querySelectorAll(".project");
     const projectWidth =
       projects[0].offsetWidth +
       parseInt(getComputedStyle(projects[0]).marginLeft) * 2;
     const scrollAmount = projectWidth * direction;
 
-    carousel.scrollBy({
-      left: scrollAmount,
-      behavior: "smooth",
+    const maxScrollLeft = carousel.scrollWidth - carousel.clientWidth;
+    const currentScrollLeft = carousel.scrollLeft;
+
+    if (direction === 1 && currentScrollLeft + scrollAmount >= maxScrollLeft) {
+      carousel.scrollTo({ left: 0, behavior: "smooth" });
+    } else if (direction === -1 && currentScrollLeft + scrollAmount <= 0) {
+      carousel.scrollTo({ left: maxScrollLeft, behavior: "smooth" });
+    } else {
+      carousel.scrollBy({ left: scrollAmount, behavior: "smooth" });
+    }
+  }
+
+  let interuptAutoScroll = false;
+
+  for (let i = 0; i < projects.length; i++) {
+    projects[i].addEventListener("mouseenter", () => {
+      interuptAutoScroll = true;
+    });
+    projects[i].addEventListener("mouseleave", () => {
+      interuptAutoScroll = false;
+    });
+    projects[i].addEventListener("touchstart", () => {
+      interuptAutoScroll = true;
+    });
+    projects[i].addEventListener("touchend", () => {
+      interuptAutoScroll = false;
     });
   }
+
+  function autoScroll() {
+    setTimeout(() => {
+      if (interuptAutoScroll) {
+        autoScroll();
+      } else {
+        scrollCarousel(1);
+        autoScroll();
+      }
+    }, 10000);
+  }
+
+  autoScroll();
 }

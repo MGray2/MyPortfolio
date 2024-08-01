@@ -351,11 +351,10 @@ html {
 .miniPageHolder {
   display: grid;
   grid-template-columns: repeat(3, 33%);
-  width: 96%;
+  width: 100%;
   background-color: var(--secondary-white);
   font-size: 24pt;
   text-shadow: 2px 2px var(--primary-gold);
-  padding: 2%;
 }
 
 .miniTitle {
@@ -389,8 +388,16 @@ html {
   padding: 2%;
 }
 
-.scrollButton {
+.carouselHolder {
   width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--secondary-white);
+}
+
+.scrollButton {
+  width: 10%;
   height: 100%;
 }
 
