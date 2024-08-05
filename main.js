@@ -33,6 +33,7 @@ if (document.title === "Portfolio of Micah Gray") {
 if (document.title === "Projects") {
   const carousel = document.querySelector(".miniPageHolder");
   const projects = document.querySelectorAll(".project");
+  const buttons = document.querySelectorAll(".scrollButton");
   function scrollCarousel(direction) {
     const projectWidth =
       projects[0].offsetWidth +
@@ -68,15 +69,36 @@ if (document.title === "Projects") {
     });
   }
 
+  for (let i = 0; i < buttons.length; i++) {
+    buttons[i].addEventListener("mouseenter", () => {
+      interuptAutoScroll = true;
+    });
+    buttons[i].addEventListener("mouseleave", () => {
+      interuptAutoScroll = false;
+    });
+    buttons[i].addEventListener("touchstart", () => {
+      interuptAutoScroll = true;
+    });
+    buttons[i].addEventListener("touchend", () => {
+      interuptAutoScroll = false;
+    });
+  }
+
+  let counter = 0;
   function autoScroll() {
     setTimeout(() => {
       if (interuptAutoScroll) {
+        counter = 0;
         autoScroll();
       } else {
-        scrollCarousel(1);
+        counter++;
         autoScroll();
       }
-    }, 10000);
+      if (counter == 15) {
+        scrollCarousel(1);
+        counter = 0;
+      }
+    }, 1000);
   }
 
   autoScroll();
