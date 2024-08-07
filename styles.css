@@ -26,6 +26,7 @@ body {
 
 html {
   scroll-behavior: smooth;
+  background-color: var(--secondary-black);
 }
 
 /* Navigation Bar */
@@ -175,8 +176,10 @@ html {
   width: 100%;
   height: fit-content;
   position: absolute;
-  top: 75%;
+  top: 40%;
   left: 0%;
+  background-color: var(--secondary-white);
+  padding-top: 20%;
 }
 
 /* About Me Box */
@@ -316,6 +319,7 @@ html {
   width: 60px;
   height: 18px;
 }
+
 /* Contacts */
 .bottomBar {
   display: flex;
@@ -323,17 +327,16 @@ html {
   align-items: center;
   justify-content: space-evenly;
   width: 100%;
-  height: 5%;
+  height: 50px;
   background-color: var(--secondary-black);
   box-shadow: 0px -4px 4px 6px var(--tertiary-black);
   text-shadow: 2px 2px var(--primary-black);
   font-size: 12pt;
-  position: absolute;
-  top: 110%;
-  left: 0%;
+  margin-top: 5%;
 }
 
 /* Project Page */
+
 .projectPageHolder {
   display: flex;
   flex-direction: column;
@@ -345,7 +348,7 @@ html {
   width: 100%;
   height: auto;
   min-height: 50%;
-  background-color: var(--tertiary-black);
+  background-color: var(--secondary-white);
 }
 
 .miniPageHolder {
@@ -455,10 +458,9 @@ html {
 
 .projectImage {
   grid-area: image;
-  height: 300px; /* Set maximum height */
-  width: 500px; /* Set maximum width */
+  height: 300px;
+  width: 500px;
   border-width: 8px;
-  margin: 3%;
   border-style: inset;
   border-color: var(--primary-gold);
   flex-shrink: 1; /* Allow the image to shrink */
@@ -492,4 +494,50 @@ html {
   display: flex;
   grid-area: footer;
   justify-content: space-around;
+  margin-top: 2%;
+}
+
+/* Mobile Screens */
+
+@media screen and (max-width: 950px) {
+  /* Home Screen*/
+
+  /* Project Screen */
+  .miniTitle {
+    padding-top: 20%;
+  }
+
+  .project {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .projectImage {
+    width: 300px;
+    height: 150px;
+  }
+
+  .projectFooter {
+    flex-direction: column;
+  }
+
+  .LinkButton {
+    margin-bottom: 5%;
+  }
+
+  .desc {
+    padding-left: 0px;
+  }
+}
+
+/* You better not have a device this small */
+@media screen and (max-width: 420px) {
+  /* Home Page */
+
+  /* Project Page */
+  .projectImage {
+    width: 200px;
+    height: 125px;
+  }
 }
