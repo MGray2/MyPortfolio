@@ -33,7 +33,11 @@ if (document.title === "Portfolio of Micah Gray") {
 if (document.title === "Projects") {
   const carousel = document.querySelector(".miniPageHolder");
   const projects = document.querySelectorAll(".project");
+  const projectImages = document.querySelectorAll(".projectImage");
+  const projectDesc = document.querySelectorAll(".desc");
   const buttons = document.querySelectorAll(".scrollButton");
+  const modeButton = document.getElementById("modeButton");
+
   function scrollCarousel(direction) {
     const projectWidth =
       projects[0].offsetWidth +
@@ -102,4 +106,44 @@ if (document.title === "Projects") {
   }
 
   autoScroll();
+
+  function viewMode(galleryMode) {
+    if (galleryMode) {
+      // Gallery Mode On
+      modeButton.textContent = "View Carousel";
+      buttons[0].style.display = "none";
+      buttons[1].style.display = "none";
+      carousel.className = "miniPageHolder mph_glry";
+      for (let i = 0; i < projects.length; i++) {
+        projects[i].className = "project p_glry";
+      }
+      for (let i = 0; i < projectImages.length; i++) {
+        projectImages[i].className = "projectImage pi_glry";
+      }
+      for (let i = 0; i < projectDesc.length; i++) {
+        projectDesc[i].className = "desc pd_glry";
+      }
+    } else {
+      // Gallery Mode Off
+      modeButton.textContent = "View Gallery";
+      buttons[0].style.display = "block";
+      buttons[1].style.display = "block";
+      carousel.className = "miniPageHolder";
+      for (let i = 0; i < projects.length; i++) {
+        projects[i].className = "project p_crsl";
+      }
+      for (let i = 0; i < projectImages.length; i++) {
+        projectImages[i].className = "projectImage";
+      }
+      for (let i = 0; i < projectDesc.length; i++) {
+        projectDesc[i].className = "desc";
+      }
+    }
+  }
+
+  let galleryMode = false;
+  modeButton.addEventListener("click", () => {
+    galleryMode = !galleryMode;
+    viewMode(galleryMode);
+  });
 }

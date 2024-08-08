@@ -336,7 +336,6 @@ html {
 }
 
 /* Project Page */
-
 .projectPageHolder {
   display: flex;
   flex-direction: column;
@@ -349,15 +348,6 @@ html {
   height: auto;
   min-height: 50%;
   background-color: var(--secondary-white);
-}
-
-.miniPageHolder {
-  display: grid;
-  grid-template-columns: repeat(3, 33%);
-  width: 100%;
-  background-color: var(--secondary-white);
-  font-size: 24pt;
-  text-shadow: 2px 2px var(--primary-gold);
 }
 
 .miniTitle {
@@ -380,6 +370,7 @@ html {
 }
 
 .miniPageHolder {
+  /* this is technically the carosel/gallery */
   display: flex;
   overflow-x: hidden;
   scroll-snap-type: mandatory;
@@ -416,12 +407,6 @@ html {
 }
 
 .project {
-  display: grid;
-  grid-template-areas:
-    "header header header header header header"
-    "image image image desc desc desc"
-    "footer footer footer footer footer footer";
-  flex: none;
   align-items: center;
   background-color: var(--primary-white);
   border-radius: 12px;
@@ -435,7 +420,6 @@ html {
   max-height: 80%;
   text-shadow: 2px 2px var(--primary-gold);
   overflow: hidden;
-  transform: scale(0.8);
 }
 
 .projectsPage {
@@ -476,6 +460,7 @@ html {
   box-shadow: 0px 3px 3px var(--tertiary-black);
   font-size: 78%;
 }
+
 .LinkButton:hover {
   background-color: var(--secondary-gold);
   cursor: pointer;
@@ -497,8 +482,50 @@ html {
   margin-top: 2%;
 }
 
-/* Mobile Screens */
+#modeButton:hover {
+  cursor: pointer;
+  color: var(--primary-white);
+  text-shadow: 1px 1px var(--primary-black);
+}
 
+/* Display Modifiers */
+.p_crsl {
+  /* carousel modifier for .project */
+  display: grid;
+  grid-template-areas:
+    "header header header header header header"
+    "image image image desc desc desc"
+    "footer footer footer footer footer footer";
+  flex: none;
+  transform: scale(0.8);
+}
+
+.p_glry {
+  /* gallery modifier for .project */
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+}
+
+.pi_glry {
+  /* gallery modifier for .projectImage */
+  width: 300px;
+  height: 150px;
+}
+
+.pd_glry {
+  /* gallery modifier for .desc */
+  padding-left: 0%;
+  font-size: 12pt;
+}
+
+.mph_glry {
+  /* Gallery modifier for .miniPageHolder */
+  display: grid;
+  grid-template-columns: repeat(3, 33%);
+}
+
+/* Mobile Screens */
 @media screen and (max-width: 950px) {
   /* Home Screen*/
 
@@ -528,6 +555,16 @@ html {
 
   .desc {
     padding-left: 0px;
+  }
+  .mph_glry {
+    grid-template-columns: repeat(2, 50%);
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .mph_glry {
+    display: flex;
+    flex-direction: column;
   }
 }
 
