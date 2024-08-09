@@ -37,6 +37,7 @@ if (document.title === "Projects") {
   const projectDesc = document.querySelectorAll(".desc");
   const buttons = document.querySelectorAll(".scrollButton");
   const modeButton = document.getElementById("modeButton");
+  const projectButtons = document.querySelectorAll(".LinkButton");
 
   function scrollCarousel(direction) {
     const projectWidth =
@@ -123,6 +124,9 @@ if (document.title === "Projects") {
       for (let i = 0; i < projectDesc.length; i++) {
         projectDesc[i].className = "desc pd_glry";
       }
+      for (let i = 0; i < projectButtons.length; i++) {
+        projectButtons[i].className = "LinkButton lb_glry";
+      }
     } else {
       // Gallery Mode Off
       modeButton.textContent = "View Gallery";
@@ -137,6 +141,9 @@ if (document.title === "Projects") {
       }
       for (let i = 0; i < projectDesc.length; i++) {
         projectDesc[i].className = "desc";
+      }
+      for (let i = 0; i < projectButtons.length; i++) {
+        projectButtons[i].className = "LinkButton";
       }
     }
   }
